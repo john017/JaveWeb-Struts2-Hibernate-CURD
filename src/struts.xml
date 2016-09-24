@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default"  extends="struts-default" >
+		<action name="search" class="com.action.searchall2" method="sa">
+			<result>Show.jsp</result>
+		</action>
+		<action name="search2" class="com.action.PageListAction" method="sa">
+			<result>show2.jsp</result>
+		</action>
+		<action name="delete" class="com.action.delete" method="dl">
+			<result type="redirectAction">search2</result>
+		</action>
+		<action name="update" class="com.action.update" method="up">
+			<result type="redirectAction">search2</result>
+		</action>
+		<action name="add" class="com.action.add" method="add">
+			<result type="redirectAction">search2</result>
+		</action>
+	</package> 
+</struts>
